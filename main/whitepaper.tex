@@ -1,0 +1,359 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% NOTE: It may be necessary to run LaTeX two or more times
+% in order for section headings, internal and external
+% references, etc. to build properly
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% DRAFT MODE
+% Produces
+% a single column of double-spaced text
+% with a wide right margin for editor's
+% notes
+%
+\documentclass[letterpaper]{article}
+\usepackage{setspace}
+\doublespacing
+\usepackage{geometry}
+\usepackage[printwatermark]{xwatermark}
+\usepackage{xcolor}
+\usepackage{graphicx}
+  \newwatermark[allpages,color=gray!20,angle=60,scale=3.5,xpos=0,ypos=0]{DRAFT COPY}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% JOURNAL MODE
+% The following line is for publication and produces
+% two columns of single-spaced text
+%\documentclass[twocolumn,pre,floats,aps,amsmath,amssymb]{revtex4}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% PACKAGE INVOCATIONS
+\usepackage{graphicx}
+\usepackage{bm}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%\title{DuraChain: A Decentralized Electronic Healthcare Event Environment}
+%\author{Brandon JP Scott}
+%\affiliation{Chief Technology Officer, DuraChain, LLC}
+% contact info here
+%\date{\today}
+
+%\begin{abstract}
+%This paper outlines a practical application of an Electronic Healthcare Event environment developed for the providers of Durable Medical Equipment to be able to more efficiently provide care to their patients and get them the equipment that they need sooner. Additionally, we will be providing the details of how Electronic Healthcare Events can be developed to expand beyond the DME industry and make an impact throughout healthcare. It is the intent of this paper to showcase what EHEs can do for Healthcare if deployed properly and provided the right tools to implement them.
+%\end{abstract}
+
+%\maketitle
+
+\section{Introduction}
+We describe DuraChain, a decentralized electronic healthcare event (\textbf{EHE}) environment. Using the Matrix protocol,
+\footnote{\textit{cf.} \url{https://matrix.org/blog/home/}}
+we will change the infrastructure of healthcare record-keeping by providing an approach that is faster, more secure, and more accessible. We adopt the position that healthcare data is a living entity that mandates a dynamic, sustainable environment in order to thrive and best serve the needs of patients. Following on from that, providers and other stakeholders in the healthcare industry need an efficient and intuitive way to access this data in real time. To address this issue, we outline a comprehensive solution, propose our implementation, and provide a brief analysis of the current state of the market.%
+
+\subsection{Problem}
+While many problems exist in the healthcare industry, we prioritize durable medical equipment (\textbf{DME}) at our current stage of development. At present, it takes most DME providers approximately six months from initial contact with a patient to deliver necessary equipment that improves their quality of life. In large part, this lag is due to the poor availability and/or quality of software that DME providers use to facilitate the flow of information throughout the DME sales order life cycle. In our view, six months is entirely too long.%
+
+Many DME providers use five or more separate softwares that suffer from poor integration and cost in excess \$15,000 per month (\$180,000 per annum), not including labor costs. Many patients and most small-scale healthcare organizations (\textbf{HCO}s) are unwilling to adopt new technology that has the potential to replace their current tools---mainly because of an unwillingness to carry the cost of such services. Larger HCOs, however, seem to be more receptive to new ideas and implementations.﻿%
+
+Thus, we believe that an adequate implementation of patient-first technology that simultaneously addresses the needs of HCOs and patient requires a wholesale rethinking of patient data management so as to make it accessible to those parties who can rapidly impact the market.%
+
+\subsection{Solution}
+We believe that the confounds lay in the ongoing trend toward patient-focused technology. (A prime example is the increasing frequency with which health systems are adopting "patient portals," which are almost universally slow and lacking elegant, intuitive design.) Far from believing that a patient should not have ready access and control over their health data, we argue that such an aim requires that technology for the stakeholders who routinely access, maintain, and transmit such information improves first.%
+
+Indeed, this technology is doomed to fail if conceived and developed in a vacuum; the needs of the patient must be front-of-mind; our solution stems from an approach that focuses on the provider and generates, updates, and transmits a patient's profile in a virtual representation of an exam room. Implementation of the Matrix protocol securely decentralizes patient data while offering an intuitive remedy to well-documented user interface issues in healthcare technology (HCT).%
+
+\section{Background}
+DuraChain is a team with more than ten years of experience in the durable medical equipment and software engineering industries. In addition to being leaders in our industries, we have each been directly affected by the slow pace at which the healthcare industry moves. We have a particular sensitivity to patients who suffer from a lack of mobility and believe that our drive and subject matter expertise gives us a distinct edge.%
+
+\subsection{Durable Medical Equipment}
+For most people, discussion of healthcare will probably trigger associations with hospitals and doctor's offices. Fewer people will draw connections to medical supplies and equipment that providers order for everyday or extended use. These products support the patient by providing mobility and independence.%
+
+Durable medical equipment is the set of products that are used on an ongoing basis to support a medical need and include hospital beds, oxygen concentrators and tanks, wheelchairs, crutches, commodes, ambulatory aids, blood glucose testing devices and supplies, and myriad other items.%
+
+\subsubsection{Importance}
+Durable medical equipment plays a crucial role in the modern healthcare system. Without the technology and supplies that make up DME, fatalities because of serious disease, complications, and even sleeping problems would surely rise. The National Association for Home Care reports that over 8 million people in the United States receive home care and values the industry at more than \$140 billion USD. With many populations around the world containing increasingly elderly cohorts, the trend indicates continued growth. From the emergency department to urgent care and assisted living facilities to inside the home, DME is present at every stage in the process of delivering healthcare.%
+
+\subsection{Distributed Ledger Technology}
+Distributed ledger technology (\textbf{DLT}) replicates data across multiple devices based on consensus. These devices can be owned and operated by any person or institution so long as they have access to the network. Since there is no central locus of control over the data, both a peer-to-peer network and a robust consensus algorithm are necessary to ensure the accuracy and integrity of the data.%
+
+  \subsubsection{Misconceptions}
+  Distributed ledger technology and blockchain technology are frequently confused as synonyms. Given the rapid onset of these technologies and how they took the attention the media and the public by storm, such confusion is understandable. Mere mention of a blockchain immediately points people's thoughts to financial transactions, speculative trading, imperfect markets defined by their volatility, and overnight millionaires.%
+
+  However, notions like these fail to capture the true scope and potential of DLT. To resolve any ambiguity, the only thing being recorded and transmitted across a distributed ledger is data. Any form of data storage can theoretically be retooled to use DLT.%
+
+  The notion that DLT is an all-or-nothing model for software development is also a misconception. Numerous hypotheses circulate that claim DLT is the harbinger of unprecedented change and disruption to many industries. Over the long run, this may very well prove to be the case. There are, however, far more practical use cases ripe for implementation that will likely serve as stepping-stones since they can be realized quickly and with relative ease.%
+%
+  In the healthcare domain, another persistent myth states that use a distributed ledger requires a radical redesign of how patient data is handled. While the current models are unequivocally ineffective, it is important to cultivate an awareness of what users are able to adapt to, use, and can ultimately result in a practical application.%
+
+  \subsubsection{Importance}
+  Forecasting the impact of a new technology on any particular industry is a challenging task, to be sure. That being said, it may be prudent to frame the DME-DLT interface as membrane: While the positive effects of DLT on the DME space are easy to see, implementation of distributed ledger technology in a flagship industry like DME and healthcare data may provoke a sea change in a number areas.%
+
+  Potential improvements in security alone provide a compelling reason to test solutions. What's more, the ability to generate, manage, and transmit records (healthcare or otherwise) with a greater focus on the customer is a non-trivial benefit and could put early adopters of such technology years ahead of the rest of their field.%
+
+  At the moment, DLT and DME exist in relative isolation. Data handling in DME is demonstrably weak and healthcare is opaque to leaders in DLT. A marriage between the two fields is sure to be profitable for the technology, healthcare stakeholders of all types, and a potentially limitless number of domains.%
+
+  The proposal outlined here is meant to serve as the gateway to a practical understanding and implementation of DLT in healthcare. Our choice to focus narrowly on DME does not reflect a limited scope of thought but rather a calculated targeting of an implementation that is possible, feasible, and promotes an easy transition for customers while cutting their costs.%
+
+\section{Architecture}
+The foundation of our technology is data generation, management, and transmission. These cornerstones include novel ways of storing patient data, identifying and providing access to various types of users, and our overall software implementation.%
+
+To accomplish these objectives, we have carefully considered the precise target of our solution, our plan for implementation and deployment, and a process to ensure that our software adequately addresses the needs of providers and their patient base.%
+
+\subsection{Current Model}
+The most common methods of maintaining a database of patient records are the electronic healthcare record (\textbf{EHR}) and the electronic medical record (\textbf{EMR}). Both EHR and EMR are centralized collections of data pertaining to an individual patient. They may be centralized to a particular system or a single healthcare practice.%
+
+  \subsubsection{Electronic Healthcare Records}
+  An electronic health record (\textbf{EHR}) is a digital record of health information. It contains all of the information found in a typical paper chart---plus a lot more. EHRs include medical history, vital signs, progress notes, diagnoses, prescribed medications, immunization dates, allergies, lab orders and results, and medical imaging data. An EHR may also contain other relevant information pertaining to health insurance, demographics, and even data imported from personal devices.%
+
+  \subsubsection{Electronic Medical Records}
+  An electronic medical record (\textbf{EMR}) is a more limited form of health information. It contains all of the information found in a typical paper chart. EHRs include medical history, vital signs, progress notes, diagnoses, prescribed medications, immunization dates, allergies, lab orders and results, and medical imaging data. While EMRs work well within the confines of a single practice, their utility is limited by the fact that they cannot readily travel outside that practice. In fact, a patient's EMR must often be printed and mailed or faxed in order for an outside provider to access it.%
+
+\subsection{DuraChain Model}
+The EHR is an evolution or enhanced version of the EMR. Despite the apparent movement in a positive direction, implementation and handling of EHRs still impose severe limitations. By standardizing and decentralizing this data and storing it in a ledger, a greater number of stakeholders can securely access patient data. DuraChain's approach to healthcare data places each patient and their data in their data into a room analogous to a real-life hospital visit.%
+
+The EHR represents a critical and positive shift toward better patient care and we do not intend to alter it. Instead, we insist that the data be stored in a manner that places less emphasis on the monetary value of the data.%
+
+We achieve this by regarding the patient as the single most important, invaluable piece of data. As such, no single entity ought to be allowed to "own" the data about a patient. Through invitations and permissions-based access, multiple stakeholders in a patient's care may view and update patient records while being made aware of updates made by other parties. We term the process of receiving updates about a patient an Electronic Healthcare Event (\textbf{EHE}).%
+
+  \subsubsection{Electronic Healthcare Events}
+  An Electronic Healthcare Event (EHE) is an update to a patient’s EHR ledger. An EHE is sent to a Patient Room and once confirmed, the EHE is made visible on the patient’s ledger and an update is made to their EHR reflecting the event.%
+
+  Advances in event-based storage made by Matrix allow us to decentralize both records an conversations about a patient. This permits an unprecedented and patient-forward DME sales order life cycle process that will save time and streamline the approach for getting equipment into the patient's home in a timely manner.%
+
+  Event-based storage also scales readily, allowing for rapid, modular development and implementation of softwares beyond the DME application discussed here.%
+
+    \paragraph{Benefits of Event-Based Distribution}
+    Using an event-based distribution model, stakeholders can interact in real time without the need to communicate with any of the centralized authorities that presently act as gatekeepers and bottlenecks. The real-time functional and spatial awareness enjoyed by all parties will lead to a greater understanding of where, when, and in what state any given sales order exists in its life cycle.%
+
+    For our present DME implementation of DLT, our chief concern is providing data about the user(s). Currently, many actors in the DLT space are only concerned with dynamic content posting---live interaction, so to speak. Healthcare, however, is an excellent example of where static content posting is still alive and well.%
+
+    In this regard, our system allows for a dynamic understanding of change as it acts on ``static'' content. Cetain variables about a patient, like their name, can certainly be viewed as static. By making these variables event, though, we can track who updates what details about a patient and thus use these data to track who is active inside a patient's room at any given time. The fine granularity offered by event-based information distribution will foster a deep and improved understanding of the patient care process.%
+
+    \paragraph{Servers as Synapses}
+    A useful analogy to conceptualize how the network of servers pass information back and forth is to imagine each connection as a synapse (the interface between neurons) in the brain. Neurons receive a stimulus and respond to that stimulus by taking an appropriate action or simpkly passing the input ``down the line.''%
+
+    In our network, a server will take an event posted by a user and fire it off to the rest of the servers it shares a connection with. The collective network then provides feedback about the broadcast by confirming and posting the event. Different servers fire off events that ripple throughout network of synapses and post to common spaces to inform the other servers that they have done so.%
+    %
+  \subsubsection{Patient Rooms}
+  Patients are added to the software through the creation of a room dedicated to that patient. EHEs will be posted to this location by the various users and the information shown to them will be a reflection of the group consensus. These rooms contain a running ledger of posted EHEs and discussions about the patient necessary for users to discharge their roles.%
+
+  EHEs posted to the room comprise the available details about a patient. Events posted by and visible to DuraChain users include:%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Consider presenting the following EHEs in a table
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \texttt{
+  {\\
+  firstName,\\
+  middleName,\\
+  lastName,\\
+  primaryInsProvider,\\
+  primaryInsIdentifier,\\ 
+  secondaryInsProvider,\\ 
+  secondaryInsIdentifier,\\ 
+  height,\\ 
+  weight,\\ 
+  gender,\\ 
+  homePhone,\\ 
+  mobilePhone,\\ 
+  homeAddress\\
+  }
+  }%
+
+  \subsubsection{Users}
+  The most critical aspect involved in ensuring robust security of data stored in patient rooms is the management of user permissions. Thus, our system only allows users to join a patient's room via an invitation issued by an existing, qualified member of that room. In the event that a patient is new to the system and does not yet have a room built for them, then a qualified, permissioned user associated with the provider making contact with that patient will be able to initiate the creation of a Patient Room.%
+%
+  \paragraph{Administration}
+  Administrative users are the engineers and developers who work on the DuraChain project. While they will not have access to any Patient Room directly, they are responsible for the development and maintenance of the source code associated with DuraChain. An administrator has no access to nor knowledge of any room they are not invited to, further doubling down on security. However, they may be invited to any Patient Room in order to roll out updates, conduct maintenance, or debug issues that arise for our clients.%
+  \footnote{
+  \textit{\textbf{N.B.}: It seems nontrivial that only one user type is mentioned in this section.}%
+  }
+
+  %\paragraph{Sales Representative}
+  % Sales Representative is a certified Assistive Technology Professional (ATP) through Resna which allows them to complete the necessary forms for patients. These users will be in-charge of higher tier facilities in their area and be able to create a Patient Room when appropriate. These users will be able to post EHEs to a patient’s EHR ledger & perform many of the tasks available within the Patient Room.
+
+  %\paragraph{Overlay Representative}
+  %An Overlay Representative is a less experienced version of a Sales Representative. They will often take lower tier facilities in the area and works with less complicated DME. They will have a Sales Representative who will be working with them that will need to confirm any EHEs they may post to a a patient’s EHR ledger. As they progress and become ATP certified, these users end up becoming Sales Representatives.
+
+\subsubsection{Facilities and Groups of Patients}
+Goals for our software extend beyond a reimagination of how EHRs are handled and stored. We also aim to balance these novel data protocols with the most approachable and intuitive UXUI in the indsutry. To this end, the software allows healthcare facilities to organize and group their patients in a way that allows for facility users to quickly sort through patients they care for.%
+
+In order to promote easy navigation of the vast numbers of patient rooms that will be created, we employ the built-in Group function of the Matrix protocol. This allows patients to be organized according to the facilities that care for and service them.%
+
+A user who is responsible for managing patients within a facility has the ability to create a new Patient Room---if the patient does not yet have one---and associate it with the facility's group(s). Grouping of patient rooms allows for an intuitive way for a facility to organize their patients and our UXUI ensures a streamlined approach to this functionality.%
+\footnote{
+\textbf{N.B.}: The notion of a ``room'' in Matrix is an abastract representation of a physical space in which users interact. Despite this abstraction, the concept is rather transparent.%
+
+By constrast, the use of the term ``facility'' is rather opaque and difficult to abstract from a brick-and-mortar location. It is directly challeneged by the fact that the implementation described here inverts the traditional understanding of who does what where: healthcare functionaries belonging to a facility ``visit'' the patient (by entering their room and writing an entry in the ledger). This is reminiscent of the house calls performed by general practicioners in years past.%
+
+Following on from this, the term ``facility'' fails to intuitively capture the gamut of professionals that a patient may interact with. By way of example, The Centers for MediCare and MediCaid Services (and the state-level administrators of these programs), along with other insurance carriers, are difficult to conceptualize as a facility.%
+
+Consider retooling the nomenclature here to a paradigm that will be more intuitive for the users, clients, customers, and other stakeholders that you expect to adopt DuraChain.%
+
+(Resonating with the notion of a house call, consider calling non-patient, non-DuraChain users ``Providers'' or a similarly abstract name. In this fashion, a Provider could encompass physicians writing scripts for DME, the various intermediaries involved in producing, acquiring, and delivering such equipment, insurance providers, and, eventually, a host of other stakeholders in the patient's care (\textnormal{e.g.,} pharmacies, research/trial physicians, family members, legal professionals, courts, counselors, laboratories, etc.) Such a name change has the added benefit of allowing DuraChain to position/brand/pitch the technology as eminently patient-first since all of the stakeholders in a patient's care must come to the patient and have permission to do so.
+}
+ \subsection{Implementation}
+ Successful implementation of the DuraChain environment requires active adoption and participation by DME providers, who constitute our main client base.%
+
+ In order to bring a client into our environment, they must have a copy of our server software properly installed and attached to their domain. From there, they can access our environment via our custom UI and begin creating Patient Rooms. To join a previously-existing Patient Room, they must be invited to an appropriately credentialed user inside of that room.%
+
+\subsubsection{Protected Health Information}
+Any discussion of healthcare data must obligatorily address the topic of Protected Health Information (\textbf{PHI}). For DuraChain to be implemented properly, compliance with the Health Insurance Portability and Accountability Act of 1996 (\textbf{HIPPA}) is aboslutely mandatory for both users and the servers housing patient data.%
+
+By placing the server instances within the domain of the DME provider, the client assumes responsibility for creating users, Patient Rooms, and HIPPA compliance more broadly. As the vendor of the DuraChain software, we assume liability only for performing due diligence on our clientele and extracting an assurance of their compliance with HIPPA.%
+
+In this way, the clients assume liability for compliance and removes that burden from us. This is not to a hedge or a dodge. In fact, it is actually the most efficient way to handle HIPPA compliance and liability. Assuming that we only distribute our software to reputable and responsible DME businesses, who have a HIPPA mandate, then our software remains compliant as long as all server instances are maintained by compliant parties.%
+
+\section{UXUI}
+Throughout this paper, we have argued that a wholesale redesign of the EHR is not the optimal strategy for implenenting decentralized software in the healthcare industry. Instead, we believe that the element of healthcare data management that cries out most for a radical rethinking is software design. Success in this domain will make great strides in the effort to combat the massive issues facing healthcare stakeholders.%
+
+The most radical changes should occur with respect to the user experience and the user interface. Users will benefit greatly from being able to clearly understand what data in an EHR has been changed, the straightforward implementation of our system, the ease with which new users can be trained on the software, and the improvements in accessibiity.%
+
+\subsection{UXUI Overhaul}
+Rethinking the UXUI of EHR software requires an approach that prioritizes the needs of the people who interact with patient data on a daily basis. We have conducted interviews with several of the leading providers of DME in an effort to determine the best to implement a UXUI that provides a shorter learning curve than existing software while incentivizing DME companies to make the switch with competitive pricing.%
+
+\subsection{Accessibility}
+Software developers are becoming increasingly concerned with ensuring that their products adhere to accessibility best practices. This is particularly important in the areas of user experience and user interface.%
+
+The Centre for Excellence in Universal Desgin promotes two priorities for accessible software designs:%
+  \begin{itemize}
+    \item \textbf{Priority 1} requires that ``that the application can be used by most people with impaired mobility, vision, hearing, cognition and language understanding, using their assistive technologies;'' and
+    \item \textbf{Priority 2} is to ``make [software] easier to use and will include more people with cognitive impairments or multiple disabilities.''
+  \end{itemize}
+To date, there are very few, if any, healthcare applications that can claim to closely adhere to these principles.%
+
+In our research, we found that top-grossing HCOs are laying out increasing amounts of capital to integrate a growing number of inadequate programs into their already-clunky amalgam of slow and under-performing software. By contrast, lower-revenue HCOs are inclined to choose the cheapest products within reach---and even these ``standard'' options contribute significantly to the SG\&A line item.%
+
+In either case, we see a distinct lack of attention paid to accessibility. For this to be the case in a industry where such design concerns are likely more critical than any other, we believe a renewed emphasis on accessibility is an absolute necessity.%
+
+Bearing all of this in mind, we are fully-committed to adhereing to best practices for software accessibility.%
+
+\subsection{Implementation}
+A lightweight Javascript application is our vehicle of choice to undertake such a massive overhaul of the prevailing UXUI standards in healthcare software. The application can be accessed from any modern web browser. Mobile apps for iPhone and Android operating systems will complete our software lineup.%
+
+Additionally, we will also implement our UXUI independently of the data that is being accessed. That is, just singing in to the platform enough to begin reading or writing data---a user must also be gratned permission to access a Patient Room. This is important for security, of course, but also helps us optimize the application's speed.%
+
+This Chinese wall is atypical in the software marketed to HCOs today. Indeed, a significant portion of DuraChain's edge is derived from the fact that our implementation will ensure a fast, lightweight application that is also capable of handling the large quantities of data that DME providers need.%
+
+\section{Market}
+A thorough assessment of the market is another key component of the success of the DuraChain environment. We are focused on targeting the proper market segment and providing it with an innovative, practical solution.%
+
+Software development and deployment does not exist in a vacuum, and it is therefore important to accurately assess the demands of the target segment to develop an understanding of what products they are currently using and have used previously. A fine-grained understanding of these details will allow us to deploy our own environment in the maximally-efficient manner.%
+
+We are not the first to envision a world where patient data is transformed into something more useful, practical, and accessible, we are the first to take an approach that targets DME providers with a data-forward solution---something the segment desperately needs.%
+
+\subsection{Target Market}
+We are presently targeting durable medical equipment providers. We aim to reduce their costs, unify their software environment, and do so with an easy-to-implement solution.%
+
+As mentioned above, DME providers are currently paying \%5,000-15,000 per month for access to three or more pieces of software.%
+
+  \subsubsection{Needs and Wants}
+  Many DME providers are using software that suffers from significant load times and fails to neatly integrate with the rest of their environment. They are hungry for a product that puts the power of exisiting software into a homogenous environment at a reasonable cost.%
+
+  In an interview, a potential customer expressed his dissatisfaction that he is paying for access to the metric-tracking system of a particular platform but also had to manually maintain a separate spreadsheet of this data. This unfortunate circumstance stems from the fact that program requires data to be clumsily entered into fields in order for it to actually execute any metrics-tracking tasks.%
+
+  Gaps like these are where DuraChain will be able to fill the needs and desires of DME providers while simultaneously advancing healthcare data management by leaps and bounds.%
+
+  \subsubsection{DME Provider Groups}
+  Durable medical equipment companies can be sorted into brackets according to their gross revenue. The brackets differ in their approach to providing equipment, typical delivery times, likelihood of adopting the DuraChain platform, and how they might leverage its capabilities.%
+
+  \subsubsection{\$0-5,000,000 Gross Revenue}
+  This class of DME provider is characterized by:%
+  \begin{itemize}
+    \item manual documentation and billing procedures;
+    \item prolonged documentation times;
+    \item an extended time frame between first contact with the patient and final delivery of their DME; and
+    \item a minimal barrier to entry.
+  \end{itemize}
+  A provider in this revenue bracket will typically spend \$2-4,000 each month for their software.%
+
+  \subsubsection{\$10-20,000,000 Gross Revenue}
+  A DME provider in this bracket will:%
+  \begin{itemize}
+    \item license at least 3 different softwares for business operations; and
+    \item rarely generate documentation manually.
+  \end{itemize}
+  This class of provider spends over \$10,000 per month on software to track sales orders, generate and transmit documentation, and bill to insurance carriers.%
+
+  \subsubsection{\$25-60,00,000 Gross Revenue}
+  DME providers in this revenue bracket
+  \footnote{
+    \textit{\textbf{N.B.}: This section deviates from the pattern established above. Instead of relating any defining characteristics about a DME provier in this revenue bracket, the provided copy focuses solely on monthly outlay and software usage. Please provide one or more additional factoids.}
+  }
+  are more or less at the top of the food chain. They tend to:%
+  \begin{itemize}
+    \item license 5 to 8 programs for daily use;
+    \item
+    \item
+  \end{itemize}
+  DME providers in this top bracket can expect to pay \$20,000 or more per month for software that barely allows them to maintain stable sales and production levels.%
+
+  Because of the extensive use of software in this bracket, human error is greatly reduced, but these providers also routinely suffer from data loss as workflow moves between softwares.%
+
+\subsection{Competition}
+Given the unique nature of DuraChain's solution, it is hard to identify any single entity that directly intersects with the full range of what we offer. Generally speaking, we view our closest competitors as software companies broadly specializing in healthcare data or with a particular emphasis on DME.%
+
+Notably, we do not perceive vendors of other forms of decnetralized technology as direct competitors. In fact, we aim to foster collaboration with these organizations to improve our EHE system while we focus our monetization efforts on our UXUI.%
+
+  \subsubsection{Brightree}
+  Brightree is a DME billing system that sold to respiratory company ResMed in 2016 for \$800,000,000. Notable aspects of the Brightree platform include a mobile app, MediCare and MedicAid pricing tables, and the ability to connect with referring medical providers. They also work directly with clients to implement custom builds of the Brightree environment.%
+
+  Brightree falls short in a number of ways, though. The UI is 10 years old and has never been updated. Technically packed with features, the difficulty of using the software means that most DME companies only use Brightree for billing. The software is also very slow and frequently contains outdated data.%
+
+  Instead of proactively addressing these deficiencies, Brightree has instead spent \$140,000,000 in the last 7 years to acquire competitors and corner the market with their 2,300 users.%
+
+  \subsubsection{Lazarus}
+  Lazarus is a patient documentation system created by Orbit Medical. Workflow is usable and it offers a good note-taking system. The system allows patient documentation to be attached to a patient file. It can also track sales representatives, deliveries, and repairs made to DME.%
+
+  The patient documentation system often contains duplicates, however. Search criteria are limited to \texttt{orderNumber}, \texttt{firstName}, and \texttt{lastName} of the patient. The Lazarus UI is also outdated, having been created sometime before 2010. The UI only allows a single user access a patient file at a time, imposing severe constraints on efficiency. Integration is limited and implementation can take from 6 to 12 months for each DME provider.%
+
+  \subsubsection{Iboss}
+  Iboss is an inventory system for DME providers. It stores products via serial number and tracks each item by manufacturer SKU, but search criteria are limited to serial numbers. Integration with other solutions required by DME providers is limited. For example, Iboss cannot export inventory data to Lazarus. Since Iboss exists in relative isolation to other DME software products, tracking inventory associated with a patient is difficult.%
+
+  \subsubsection{Domo}
+  Domo is a data reporting company that has found great success, raising nearly \$700,000,000 in seven years. They have internal messaging, app stores to purchase cards, and a well-designed front-end client for browsers. They suffer from incomplete reporting and a slow system. Additionally, they have a steep fee of \$83 per user per month, which adds up quickly in a market where 100 field representatives is not unheard of.%
+
+  \subsubsection{Health Splash}
+  Health Splash is a patient documentation and physician system that states it will be using blockchain technology by 3Q18. They intend to launch a mobile application that connects patients and doctors to check insurance, set appointments, check ER wait times, and chat directly with doctors. A patient will be able view their medical records and send them wherever they choose.%
+
+  The potential upside of Health Splash is huge, but little is known about how they will be implementing blockchain technology. The information they provide online is questionable---much of it clearly a restatement of terms and buzzwords easily found with a Google search. Health Splash plans to conduct an Initial Coin Offering (\textbf{ICO}), which may offer more insight into their future goals and ability to execute.%
+
+  \begin{center}
+  \textbf{TABLE 1 ABOUT HERE}
+  \end{center}
+
+\section{Conclusion}
+DuraChain will help durable medical equipment providers offer more efficient patient care with an innovative, all-in-one solution that decreases costs and the sales order life cycle.  We've also discussed how DuraChain can be scaled beyond DME and be used by all participants in the patient care process.%
+
+With our focus on providing a fast, accurate, and secure way for providers to interact with patient data, we will fix longstanding problems in healthcare and realize a patient-first paradigm.%
+
+\subsection{Next Steps}
+The success of DuraChain and the future we envision require that DME providers choose our environment over our competitors. The ensure that we position ourselves strongly, we will be implementing a test environment that invited DME providers will gain early access to.
+
+Using the feedback obtained from testing and the selected providers, we will make any necessary changes before deploying on a larger scale.%
+
+\subsection{Future}
+While DuraChain's present focus is on fixing issues that face DME, our long term plan is to address healthcare data as a whole and to insert ourselves as an integral part of the patient care process.
+
+We believe that success in this goal hinges on placing as much power as possible into the hands of all healthcare providers eveywhere. As we've discussed in this paper, DuraChain is well-positioned to catalyze the necessary shift in patient data.%
+
+\begin{center}
+\textbf{ACKNOWLEDGEMENTS ABOUT HERE}
+\end{center}
+\begin{center}
+\textbf{APPENDICES ABOUT HERE}
+\end{center}
+\begin{center}
+\textbf{BIBLIOGRAPHY ABOUT HERE}
+\end{center}
+
+\end{document}
