@@ -32,8 +32,6 @@ It may be necessary to set the `PATH` for TeXLive.
 ### Text Editor or LaTeX Client
 You will also need a LaTeX client or a multipurpose text editor to interact with the contents of this repository.
 
-If you're a bitch, you could also upload the contents of this repository to an online TeX editor like Overleaf v2.
-
 #### Atom
 We recommned Atom, a text editor made available by GitHub that can be configured and customized for a variety of purposes, including working with LaTeX files.
 
