@@ -1,0 +1,61 @@
+\begin{thebibliography}{10}
+
+\bibitem{matrixspec}
+Matrix specification.
+\newblock \url{https://matrix.org/docs/spec/}.
+\newblock Accessed 9 September 2018.
+
+\bibitem{dmeDefinition}
+Durable medical equipment.
+\newblock
+  \url{https://www.healthcare.gov/glossary/durable-medical-quipment-dme/}.
+\newblock Accessed 9 September 2018.
+
+\bibitem{homecarestats}
+The National~Association for Home~Care and Hospice.
+\newblock Basic statistics about home care.
+\newblock \url{http://www.nahc.org/wp-content/uploads/2017/10/10hc_stats.pdf}.
+\newblock Accessed 9 September 2018.
+
+\bibitem{dmemarket}
+{U.S. Durable Medical Equipment Market Analysis Report By Product (Monitoring
+  \& Therapeutic Devices, Personal Mobility Devices, Bathroom Safety Devices \&
+  Medical Furniture), And Segment Forecasts, 2018 - 2025}.
+
+\bibitem{DLT}
+{Blockchain \& Distributed Ledger Technology (DLT)}.
+\newblock
+  \url{https://www.worldbank.org/en/topic/financialsector/brief/blockchain-dlt}.
+\newblock Accessed 9 September 2018.
+
+\bibitem{EMRvsEHR}
+Practice Fusion.
+\newblock Ehr vs. emr.
+\newblock \url{https://www.practicefusion.com/blog/ehr-vs-emr/}.
+\newblock Accessed 9 September 2018.
+
+\bibitem{palmaEHR}
+{George Palma, MD}.
+\newblock Electronic health records: The good, the bad and the ugly.
+\newblock
+  \url{https://www.beckershospitalreview.com/healthcare-information-technology/electronic-health-records-the-good-the-bad-and-the-ugly.html}.
+\newblock Accessed 9 September 2018.
+
+\bibitem{HIPAA}
+{42 CFR 403.812 - HIPAA privacy, security, administrative data standards, and
+  national identifiers.}
+\newblock \url{https://www.law.cornell.edu/cfr/text/42/403.812}.
+\newblock Accessed 9 September 2018.
+
+\bibitem{w3Accessibility}
+Accessibility.
+\newblock \url{https://www.w3.org/standards/webdesign/accessibility}.
+\newblock Accessed 9 September 2018.
+
+\bibitem{universaldesign}
+Guidelines for application software accessibility.
+\newblock
+  \url{http://universaldesign.ie/Technology-ICT/Irish-National-IT-Accessibility-Guidelines/Application-software/Guidelines-for-Application-Software-Accessibility/}.
+\newblock Accessed 9 September 2018.
+
+\end{thebibliography}
